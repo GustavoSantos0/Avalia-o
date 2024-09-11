@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+:root{
+    --cor-principal: #131519;
+    --cor-quadrado: #1c2022;
+    --cor-circulo: rgba(81, 87, 90, 0.4);
+    --cor-titulo: white;
+    --cor-paragrafo: grey;
+    --cor-clique: rgb(202, 148, 12);
+    --cor-hover: white;
+    --fonte-principal: 'Heebo', sans-serif;
+}
+
+body {
+    background-color: var(--cor-principal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--fonte-principal);
+}
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-quadrado);
+    width: 25em;
+    height: 25em;
+    border-radius: 30px;
+    padding: 2em;
+    position: relative;
+}
+
+.circulo_estrela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-circulo);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8%;
+    left: 8%;
+}
+
+.estrela {
+    text-align: center;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-titulo);
+    text-align: center;
+}
+
+.avaliacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7em;
+    width: 100%;
+}
+
+.bola {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-circulo);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.botao {
+    background-color: var(--cor-clique);
+    width: 100%;
+    height: 3em;
+    border-radius: 1em;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 2em;
+    font-weight: 600;
+}
+
+.titulo {
+    font-weight: 500;
+    color: var(--cor-titulo);
+}
+
+.frase {
+    color: var(--cor-paragrafo);
+}
+
+.bola:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-principal);
+}
+
+.botao:hover {
+    background-color: var(--cor-hover);
+}
+
+.bola.selecionado {
+    background-color: var(--cor-clique);
+    color: var(--cor-principal);
+}
+
+@media (max-width: 480px) {
+    .centro {
+        width: 80%;
+        height: auto;
+        padding: 1em;
+    }
+    .conteudo{
+        
+        height: auto;
+        padding: 1em;
+    }
+    .avaliacao{
+        gap: 0.5em;
+   
+    }
+    .circulo_estrela{
+        left: 5%;
+        top: 5%;
+        width: 2.7em;
+        height: 2.7em;
+    }
+   
+
+}
